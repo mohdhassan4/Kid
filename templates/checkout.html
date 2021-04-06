@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <script src="https://kit.fontawesome.com/e72f201fc4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/pre_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/checkout.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/navbar.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/banner.css" media="screen"/>
+    <title>Checkout</title>
+</head>
+<body>
+    <div id="overlay" class="body">
+        <div class="bookk">
+            <div class="innerr">
+                <div class="left"></div>
+                <div class="middle"></div>
+                <div class="right"></div>
+            </div>
+            <ul class="ul">
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="db" style="display: none;">
+       
+         <nav class="navbar navbar-expand-lg shadow fixed-top" style=" background-color: white;border-bottom: 1px solid white ">
+    <a href="/" class="navbar-brand">
+          <img src="/static/image/Coderrange_Logo2.png" class="image-fluid text-white ml-lg-3 mt-1" alt="" style="height: 40px; width:200px ">
+    </a>
+    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span style="color: #0c265f;"><i class="fas fa-bars fa-2x"></i></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between ml-n1" id="navbarCollapse">
+        <ul class="navbar-nav" style="margin-left:150px">
+            <li>
+                <a href="/jvt/vision" class="mx-3 nav-item nav-link icons ">Vision</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle icons mx-3 " data-toggle="dropdown" style="color: #0c265f;">Courses</a>
+                <div class="dropdown-menu" style="border-radius: 10px; ">
+                    <ul class="dropdown-item ">
+                        <li style="list-style: none;" class="d-flex ml-n3">
+                            <div style="border-color:#777;border-style:solid;border-width:1px;height:40px;width:70px;background-color: #9fa8da" class="center-align cyan lighten-3 black-text">
+                                <div style="margin:0;margin-top:2px;font-size:20px;font-weight:600;margin-left: 12px;">
+                                    9-13
+                                    <p style="font-size:9px;margin-top: -7px; margin-left: 10px" class="truncate">
+                                        Age</p>
+                                </div>
+                            </div>
+                            <a href="/course/Kid" style="text-decoration: none; color: black;">
+                                <div class="justify-content-center text-center ml-3 mt-2">
+                                    Kids
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="dropdown-item ">
+                        <li style="list-style: none;" class="d-flex ml-n3">
+
+                            <div style="border-color:#777;border-style:solid;border-width:1px;height:40px;width:70px;background-color: #81d4fa;" class="center-align cyan lighten-3 black-text">
+                                <div style="margin:0;margin-top:2px;font-size:20px;font-weight:600;margin-left: 12px;">
+                                    14-22
+                                    <p style="font-size:9px;margin-top: -7px;margin-left: 12x" class="truncate">Age</p>
+                                </div>
+                            </div>
+                            <a href="/course/Student" style="text-decoration: none; color: black;">
+                                <div class="justify-content-center text-center ml-3 mt-2">
+                                    Student
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="dropdown-item ">
+                        <li style="list-style: none;" class="d-flex ml-n3">
+                            <div style="border-color:#777;border-style:solid;border-width:1px;height:40px;width:70px;background-color: #fff59d;" class="center-align cyan lighten-3 black-text">
+                                <div style="margin:0;margin-top:2px;font-size:20px;font-weight:600;margin-left: 8px;">
+                                    23+
+                                    <p style="font-size:9px;margin-top: -7px;margin-left: 12px" class="truncate">Age</p>
+                                </div>
+                            </div>
+                            <a href="/course/Experience" style="text-decoration: none; color: black;">
+
+                                <div class="justify-content-center text-center ml-3 mt-2">
+                                    Experienced
+                                </div>
+                            </a>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </li>
+            <li>
+                <a href="/Jvt/welcome/Community" class="nav-item nav-link  icons mx-3 ">Community</a>
+            </li>
+            <li>
+                <a href="/Jvt/Careers" class="nav-item nav-link  icons mx-3 ">Career</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-md-4 ml-lg-n3 ml-xl-0 " style="margin-left:150px">
+                {%if user.is_authenticated %}
+                <li class="nav-item dropdown pt-3">
+                    <div class="c-profile-image d-inline " aria-hidden="true" style="width: 45px; height: 45px;">
+                        {%if profile.photo == 'False' %}
+                        <img src="/static/image/profilepic.png" class="rounded-circle" alt=""
+                            style="max-width: 45px; max-height: 45px;">
+                        {%elif dummyProfiife == 0%}
+                        <img src="/static/image/profilepic.png" class="rounded-circle" alt=""
+                            style="max-width: 45px; max-height: 45px;">
+                        {%else%}
+                        <img src="{{profile.photo.url}}" class="rounded-circle" alt=""
+                            style="max-width: 45px; max-height: 45px;">
+                        {%endif%}
+                        <li class="nav-item dropdown pt-3 mx-3">
+                            <a class="nav-link dropdown-toggle text-dark d-inline" href="#" id="dropdown01"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style="font-size: 20px;">{{user.username}}</a>
+                            <div class="dropdown-menu   " aria-labelledby="dropdown01" style="font-size: 20px;">
+                                <a class="dropdown-item drop center"  href="/Profile/user=/{{user.id}}">
+                                    <i class="far fa-user-circle pr-3" style="font-size: 30px;"></i>
+                                    Profile</a>
+                                <hr class="m-0 p-0 text-black">
+                                <a class="dropdown-item drop center " href="/logout">
+                                    <i class="fas fa-power-off pl-1 pr-3"style="font-size: 30px;"></i>Logout</a>
+                            </div>
+                        </li>
+                    </div>
+                </li>
+                {%else%}
+                <li>
+                    <a href="#" class=" btn my-lg-3 my-md-2 my-2 mr-3 badge-pill px-5 nav-item  nav-link  icons " id="signupp" data-toggle="modal" data-target="#Signup">Signup</a>
+                </li>
+                <li>
+                    <a href="/account/login" class="btn my-lg-3 my-md-2 my-2 mr-3 px-5 badge-pill nav-item nav-link icons " id="signupp">Login</a>
+                </li>
+                {%endif%}
+        </ul>
+    </div>
+</nav>
+
+    <div class="modal fade bd-example-modal-lg" id="Signup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content varsig">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold text-white"> Create Your Own Account </h4>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row ">
+                    <a class="mb-2 col-lg-6 col-md-12 col-12 text-center text-decoration-none"
+                        href="/Signup/Student">
+                        <div class="student">
+                            <h3 class="font-weight-bold text-primary"> Student</h3>
+                            <p class="parafont">Create anything you imagine by executing creative code.</p>
+                            <img src="/static/image/1-removebg.png" alt="" style="width: 180px;">
+                        </div>
+                    </a>
+                    <a class=" col-lg-6 col-md-12 col-12 text-center text-decoration-none" href="/Signup/Parent">
+                        <div class="parent">
+                            <h3 class="font-weight-bold text-primary"> Kids</h3>
+                            <p class="parafont">Let us make your child to learn coding in an easy way.</p>
+                        </div>
+                    </a>
+                </div>
+                   <div class="row mt-2" >
+                        <a class=" col-lg-6 col-md-12 col-12 text-center text-decoration-none" href="/Signup/Parent">
+
+                        </a>
+                        <a class=" col-lg-6 col-md-12 col-12 text-center text-decoration-none" href="Signup1/pro">
+                            <div class="parent" style="margin-top:-178px">
+                                <h3 class="font-weight-bold text-primary"> Professionals</h3>
+                                <p class="parafont">Let join with us to learn Trending Technologies for slary hike  </p>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+            <div class="modal-footer  justify-content-center">
+                <div class="text-center text-white">
+                    Already have an account?
+                    <a class="text-white font-weight-bold" href="/account/login">Login</a><br>
+                    <a class="text-white text-center" href="/pricacy-policy">privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="container mb-5" id="mainclass">
+            <div class="row">
+                <div id="subdiv" class="col-md-8 offset-md-2 d-inline-block justify-content-center shadow-lg">
+                    <div class="mt-4 mx-auto justify-content-center text-center">
+                        <p id="order">Order details</p>
+                        <p id="course" style="color: #0c265f;">{{course.courseName}} - Online</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 val offset-3">
+                            <p>Base Price </p>
+                        </div>
+                        <div class="col-3 val d-inline-block">
+
+                            <p id="price"> ₹{{course1}} INR </p>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 val offset-3">
+                            <p>Bundle Discount </p>
+                        </div>
+                        <div class="col-3 val" id="disc">
+                            -₹ 0 INR
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4  offset-3">
+                            <h6 style="color: green;">GST 18%
+                            </h6>
+                        </div>
+                        <div class="col-3 " id="gst">
+                            ₹ INR
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 val offset-3">
+                            <p>Extra Discount </p>
+                        </div>
+                        <div class="col-3 val" id="coupn">
+                            -₹ 0 INR
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <hr style="width: 450px; border: 1px solid black;" class=" d-none d-md-block">
+                    <hr style="width: 250px; border: 1px solid black;" class=" d-block d-md-none">
+                    <div class="row">
+                        <div class="col-4 val offset-3">
+                            <p>Total
+                            </p>
+                        </div>
+                        <div class="col-3 val" id="total">
+                            ₹ INR
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header justify-content-center text-center d-flex" id="headingThree">
+                                        <p class=" coupn arrow-down" data-toggle="collapse" onclick="this.classList.toggle('active')" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">I have a coupon code</p>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body" style="border: none;">
+                                            <form>
+                                                <div class="form-row align-items-center justify-content-center text-center">
+                                                    <div class="col-auto">
+                                                        <label class="sr-only" for="inlineFormInput"> Coupon code</label>
+                                                        <input type="text" id="cop" class="form-control mb-2" id="inlineFormInput" placeholder="Enter Code">
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button type="button" onclick="coup()" class="btn btn-primary mb-2">Apply</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col justify-content-center text-center mb-3">
+                            {% if payment %}
+                            <div class="text-center mx-auto" id="checkout">
+                                <form action="/success" method="POST">
+                                    <script src="https://checkout.razorpay.com/v1/checkout.js" data-key="rzp_test_EL0CgmCc3DbVfk" data-amount="{{payment.amount}}" data-currency="INR" data-order_id="{{payment.id}}" data-buttontext="Proceed" data-name="payment_mode Corp" data-description="Test transaction"
+                                        data-image="/static/image/logo_copy.png" data-prefill.name="Mohammad Numan Khan" data-prefill.email="{{customer.email}}" data-prefill.contact="{{customer.phonenumber}}" data-theme.color="#0c265f
+                                        ">
+                                    </script>
+                                    <input type="hidden" custom="Hidden Element" name="hidden">
+                                </form>
+                                {% endif %}
+                            </div>
+
+                        </div>
+                    </div>
+                    <h6>needHelp?: maheswarreddy@gmail.com</h6>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="background:#05001d">
+            <div style="position: relative; bottom: 0px;">
+                <div class="box" style="height: auto">
+                    <div class="r-box   ">
+                    </div>
+                    <div class="r-box ">
+                    </div>
+                    <div class="r-box  d-lg-block d-md-none d-sm-none d-none p-0 ">
+                    </div>
+                    <div class="r-box d-lg-block d-md-none d-sm-none d-none p-0 ">
+                    </div>
+                    <div class=" ">
+                    </div>
+                    <div class="r-box d-lg-block d-md-none d-sm-none d-none p-0 ">
+                    </div>
+                    <div class="r-box d-lg-block d-md-none d-sm-none d-none p-0  ">
+                    </div>
+                    <div class="r-box ">
+                    </div>
+                    <div class="r-box  ">
+                    </div>
+                    <div class="r-box  ">
+                    </div>
+                    <div class="row no-gutters mt-5 ">
+                        <div class="col-lg-3 d-lg-block d-md-none d-sm-none d-none p-0  "
+                            style="border-right:1px solid transparent ;">
+                            <ul class="p-4 mt-3" style="list-style-type:none; margin-left: 60px;  ">
+                                <li class="m-2 ">
+                                    <a href="/jvt/vision" class="footershortcut ">Vision</a>
+                                </li>
+                                <li class="m-2 ">
+                                    <a href="/Jvt/Careers" class="footershortcut ">Careers</a>
+                                </li>
+                                <li class="m-2 ">
+                                    <a href="/Jvt/welcome/Community" class="footershortcut ">Community</a>
+                                </li>
+                                <li class="m-2 ">
+                                    <a href="# " class="footershortcut "></a>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-lg-2 d-lg-block d-md-none d-sm-none d-none p-0 m-0 mt-3"
+                            style="border-right:1px solid transparent ; ">
+                            <ul class="p-4 " style="list-style-type:none;  ">
+                                <li class="m-2 ">
+                                    <a href="/terms-conditions" class="footershortcut ">Terms & Conditions</a>
+                                </li>
+                                <li class="m-2 ">
+                                    <a href="/pricacy-policy" class="footershortcut ">privacy & policy</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 ">
+                            <div class="p-3 ">
+                                <h4 class="text-white text-center ">Need help ?</h4>
+                                <div class="row text-white ml-5   ">
+    
+                                    <div class="col text-white  ">
+    
+                                        <div>
+                                            <i class="far fa-envelope" style="color: white"></i>
+                                            <a class="text-white ml-2 " href="!# ">abcdefgh@gmail.com</a>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <div class="row text-white ml-5   ">
+    
+                                    <div class="col text-white  ">
+    
+                                        <div>
+                                            <i class="fas fa-mobile-alt" style="color: white"></i>
+    
+                                            <a class="text-white ml-2 " href="!# ">+91 7009851021</a>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <!-- <div class="row text-white ml-5   ">
+    
+                                    <div class="col text-white  ">
+    
+                                        <div>
+    
+                                            <i class="fas fa-map-marker-alt" style="color: white"></i>
+                                            <a class="text-white ml-2 " href="!# ">Jakhar Villa, Naear Lal kothi,</a>
+                                            <div class="ml-4">
+                                                Mansarover, Jaipur <br> Rajasthan, India <br> 332001 </div>
+                                        </div>
+                                    </div>
+    
+                                </div> -->
+    
+                            </div>
+    
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-0 m-0 mt-n2">
+                            <div class="justify-content-center text-center p-3 ">
+                                <p class="text-white font-weight-bold " style="font-size: 20px; ">Follow Us</p>
+                                <div class="pb-4 ">
+    
+                                    <a href="# " class="fa fa-facebook "></a>
+                                    <a href="# " class="fa fa-twitter "></a>
+                                    <a href="# " class="fa fa-linkedin "></a>
+                                    <a href="# " class="fa fa-instagram "></a>
+                                </div>
+    
+                            </div>
+                            <br>
+                            <div class="justify-content-center ">
+    
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="row mt-n3">
+                        <div class="col-12 justify-content-center ">
+                            <p class="text-white justify-content-center text-center  ">
+                                Copyright ©
+                                <script async=" " src="https://www.google-analytics.com/analytics.js "></script>
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                All rights reserved <i class="icon-heart text-danger " aria-hidden="true "></i> by <a
+                                    href="# " style="color: #ffd04d; font-weight: bold;" target="_blank ">JV
+                                    Technologies</a>
+                            </p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript; choose one of the two! -->
+        <script>
+        var price = {{course1}};
+        var coupn = 0;
+        var disc = 0;
+        // var cop = "mahi";
+        var valid = document.getElementById("cop");
+        var percent = (18 / 100) * price;
+        var total = (price - disc) + percent;
+        var discount=percent
+        document.getElementById("price").innerHTML = "₹ " + price + " INR";
+        document.getElementById("total").innerHTML = "₹ " + total + " INR";
+        document.getElementById("gst").innerHTML = "+₹ " + percent + " INR";
+        {% comment %} document.getElementById("disc").innerHTML = "-₹ " + discount + " INR"; {% endcomment %}
+        function coup() {
+            if (valid.value == cop) {
+                var final = total - 1000;
+                document.getElementById("coupn").innerHTML = "₹ -" + 1000 + " INR";
+                document.getElementById("total").innerHTML = "₹ " + final + " INR";
+            } else if (valid.value == full) {
+                var final = total - (total - 11);
+                document.getElementById("coupn").innerHTML = "₹ -" + (total - 11) + " INR";
+                document.getElementById("total").innerHTML = "₹ " + final + " INR";
+            } else {
+
+                document.getElementById("coupn").innerHTML = "₹ -" + 0 + " wrong code";
+                document.getElementById("total").innerHTML = "₹ " + total + " INR";
+            }
+        }
+    // </script>
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="/static/js/script_upd.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

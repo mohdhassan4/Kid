@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/grid.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/ionicons.min.css">
+    <link rel="stylesheet" href="/static/css/queries.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    
+
+
+    <!-- fav icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/favicon_package_v0.16/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon_package_v0.16/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon_package_v0.16/favicon-16x16.png">
+<link rel="manifest" href="favicons/favicon_package_v0.16/site.webmanifest">
+<link rel="mask-icon" href="favicons/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicons/favicon_package_v0.16/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicons/favicon_package_v0.16/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- <script src="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"></script> -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <title>Log in</title>
+        
+</head>
+<body>
+  {% for messages in messages%}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong id='done'>{{messages}}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>            
+      {%endfor%}
+        <nav> 
+            <div class="row">
+              <a href="/">  <img src="image/kidocbmlogo.png"  alt="kidocbm logo" class="logo"> </a>
+                <ul class="main-nav js--main-nav">
+                    <li><a href="/register" style="color:black">Sign Up</a></li>
+                    <li><a href="/login" style="color:black">Login</a></li>
+                </ul>
+                <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round ion-close-round"></i></a>
+            </div>
+        </nav>
+    <div class="container">
+      
+        <form action="/login" method="POST" class="contact-form" style="margin-top: 70px;">
+          {%csrf_token%}
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label for="email">Email</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input type="txet" id="email" name="Phone" placeholder="Your email name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col span-1-of-3">
+              <label for="password">Password</label>
+            </div>
+            <div class="col span-2-of-3">
+              <input type="password" id="password" name="password" placeholder="Enter password">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col span-2-of-3">
+              <button type="submit" class="abc"  value="">Login</button>
+            </div>
+          </div>
+        </form>
+        <p style="text-align: center; margin-top:20px; margin-bottom: 80px">don't have an account then <a href="/register" style="color: crimson;">Register</a>, </p>
+      </div>
+
+</body>
+</html>
+
+
+

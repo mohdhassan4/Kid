@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="KidoCBM is the best website for who aspiring to get good rank in NEET and JEE, Here NEET and JEE qualified tutors will teach a subject in easy methods with low cost of fees, we wanted to make a student crack an exam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/grid.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/ionicons.min.css">
+    <link rel="stylesheet" href="/static/css/queries.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <title>KidoCBM</title>
+    <!-- fav icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/favicon_package_v0.16/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon_package_v0.16/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon_package_v0.16/favicon-16x16.png">
+<link rel="manifest" href="favicons/favicon_package_v0.16/site.webmanifest">
+<link rel="mask-icon" href="favicons/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicons/favicon_package_v0.16/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicons/favicon_package_v0.16/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+ integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+ integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+ integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body> 
+  
+    <header >
+        {% for messages in messages%}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong id='done'>{{messages}}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>            
+      {%endfor%}
+        <nav> 
+            <div class="row">
+                <img src="/static/image/kidocbmlogo.png" alt="kidocbm logo" class="logo">
+                <ul class="main-nav js--main-nav">
+                    <li><a href="#aceivements">aceivements</a></li>
+                    <li><a href="#Courses">Courses</a></li>
+                    <li><a href="#OurTeam">Our Team</a></li>
+                    {%if user.is_authenticated %}
+                    <h6>{{user.username}}</h6>
+                    <li><a href="/logout">Logout</a></li>
+                    {%else%}
+                    <li><a href="/register">Sign Up</a></li>
+                    <li><a href="/login">Login</a></li>
+                    {%endif%}
+                </ul>
+                <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round ion-close-round"></i></a>
+            </div>
+        </nav>
+        <div class="hero-text-box">
+            <h1>Get NEET & IIT exposure from <br> our Qualified Mentors <span>&#128071;&#127995;</span></h1>
+            <a class="btn btn-full js--scroll-to-plans" href="#">Why us</a>
+            <a class="btn btn-ghost js--scroll-to-start" href="#">Our Team</a>
+        </div>
+    </header>
+
+    <section class="section-features js--section-plans " id="aceivements">
+        <div class="row">
+            <h2>Why should you choose us ?</h2>
+            <p class="long-copy">
+                Our Mentors has immense knowledge on Maths and Science subjects, Graduated from Top Universities and Medical colleges like JNTU-A, Lovely Professional Univerisity, Nimra Institute of Medical Sciences, Zhengzhou Medical University and many more.
+            </p>
+        </div>
+
+        <div class="row js--wp-1">
+            <div class="col span-1-of-4 box icon-p">
+                <ion-icon name="desktop" class="icon-whyus"></ion-icon>
+                <h3>Live classes</h3>
+                <p>We conduct a two hour Live session Everyday. So that each student be able interact with us. It builds & improves the student's communication</p>
+            </div>
+            <div class="col span-1-of-4 box icon-p">
+                <ion-icon name="book" class="icon-whyus"></ion-icon>
+                <h3>Detailed Explanation</h3>
+                <p>Our team is dedicated to explain each and every topic in clear ditailed form and in student's understanble way with student's communication </p>
+            </div>
+            <div class="col span-1-of-4 box icon-p">
+                <ion-icon name="cellular" class="icon-whyus"></ion-icon>
+                <h3> More Quizes</h3>
+                <p>More number of Quizzes would be done by the students to understand the quality and depth of each concept thoroughly, and we will progress student's performace</p>
+            </div>
+            <div class="col span-1-of-4 box icon-p">
+                <ion-icon name="ribbon" class="icon-whyus"></ion-icon>
+                <h3>Verified Certificate</h3>
+                <p>we will provide a verified certicate after reaching qualified marks in assesments by the students</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="section-meals">
+        <div class="row sm">
+            <h2>What are we going to teach</h2>
+        </div>
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <img src="./static/image/7.jpg" alt="child1" class="src">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./static/image/2.jpg" alt="child2" class="src">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./static/image/3.jpg" alt="child3" class="src">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./static/image/7.jpg" alt="child4" class="src">
+                </figure>
+            </li>
+        </ul>
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <img src="./static/image/7.jpg" alt="child5" class="src">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./static/image/7.jpg" alt="child6" class="src">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./static/image/7.jpg" alt="child7" class="src">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./static/image/7.jpg" alt="child8" class="src">
+                </figure>
+            </li>
+        </ul>
+    </section> -->
+     <!--
+    <section class="section-steps">
+        <div class="row">
+            <h2>How will we connect</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-2 steps-box">
+                <img src="/static/image/iphone1.png" alt="kidoiphone" class="kidoiphone">
+            </div>
+            <div class="col span-1-of-2 steps-box">
+                <div class="works-steps">
+                    <div>1</div>
+                    <p>Login with your mobile, and get otp to create an account to start learning</p>
+                </div>
+                <div class="works-steps">
+                    <div>2</div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, nam.</p>
+                </div>
+                <div class="works-steps">
+                    <div>3</div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores.</p>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+
+    <section class="meal-cities js--section-features" id="OurTeam">
+        <div class="row">
+            <h2>Who and what we are</h2>
+        </div>
+        <div class="row profilebox js--wp-4">
+            <div class="col span-1-of-4 box">
+                <img src="/static/image/hassan.png" alt="berlin" class="cityimg">
+                <h3>Hassan</h3>
+                <div class="city-feature">s
+                    <ion-icon name="person"></ion-icon>
+                    Founder & CEO
+                </div>
+                <div class="city-feature">
+                    <ion-icon name="trophy"></ion-icon>
+                    100% in Maths
+                </div>
+                <div class="city-feature">
+                    <ion-icon name="school"></ion-icon>
+                    LPU Graduate
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="/static/image/mdshrif.png" alt="berlin" class="cityimg">
+                <h3>Shareef</h3>
+                <div class="city-feature">
+                    <ion-icon name="person"></ion-icon>
+                    NEET Lead
+                </div>
+                <div class="city-feature">
+                    <ion-icon name="trophy"></ion-icon>
+                    Expert in Botany & Zoology
+                </div>
+                <div class="city-feature">
+                    <ion-icon name="school"></ion-icon>
+                    Medico NTRUHS
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="/static/image/pp.jpg" alt="berlin" class="cityimg">
+                <h3>Lokesh</h3>
+                <div class="city-feature">
+                    <ion-icon name="person"></ion-icon>
+                    JEE Lead
+                </div>
+                <div class="city-feature">
+                    <ion-icon name="trophy"></ion-icon>
+                    Expert in Physics & Math
+                </div>
+                <div class="city-feature">
+                    <ion-icon name="school"></ion-icon>
+                    LPU Graduate
+                </div>
+            </div>
+            
+            <div class="col span-1-of-4 box">
+                <img src="/static/image/harish.png" alt="berlin" class="cityimg">
+                <h3>Hareesh</h3>
+                <div class="city-feature">
+                    <ion-icon name="person"></ion-icon>
+                    Neet & JEE Lead
+                </div>
+                <div class="city-feature">
+                    <ion-icon name="trophy"></ion-icon>
+                    Expert in Math& Chemistry
+                </div>
+                <div class="city-feature">
+                    <ion-icon name="school"></ion-icon>
+                    JNTU-A Graduate
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="section-testimonials">
+        <div class="row">
+            <h2>our Students Feedback</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-3">
+                <blockquote>
+                    the course is helpful for understanding concepts well, the way mentors taught us the subjects is awesome
+                    <cite><img src="/static/image/customer-1.jpg" alt="customer-1">Alberto Decan</cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <blockquote>
+                    the course is helpful for understanding concepts well, the way mentors taught us the subjects is awesome
+                    <cite><img src="/static/image/customer-2.jpg" alt="customer-2">Alberto Decan</cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <blockquote>
+                    the course is helpful for understanding concepts well, the way mentors taught us the subjects is awesome
+                    <cite><img src="/static/image/customer-3.jpg" alt="customer-3">Alberto Decan</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-plans " id="Courses">
+        <div class="row">
+            <h2>Signup and learn today</h2>
+        </div>
+        <div class="row">
+            {%for item in items%}
+                    <div class="col span-1-of-3 js--wp-2">
+                        <div class="plan-box">
+                            <div>
+                                <h3>{{item.courseName}}</h3>
+                                <p class="plan-price">Rs {{item.price}}</p>
+                                <p class="plan-price-meal">30 days course with 65+ Hours Teaching</p>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><ion-icon name="checkmark-done"></ion-icon>2 hours class</li>
+                                    <li><ion-icon name="checkmark-done"></ion-icon>Mon to friday</li>
+                                    <li><ion-icon name="checkmark-done"></ion-icon>Life long access</li>
+                                    <li><ion-icon name="checkmark-done"></ion-icon>live classes</li>
+                                </ul>
+                            </div>
+                            <div>
+                                {%if user.is_authenticated %}
+                                <form action="/Buy" method="POST">
+                                    {%csrf_token%}
+                                <!-- <a href="/Buy" name="courseid" class="btn btn-full" value="{{item.id}}">Enrol now</a> -->
+                                <button class="buycourse3 shadow-lg  rounded"
+                                                                name="courseid"
+                                                                style="text-decoration: none;background-color: {{course.color2}};"
+                                                                value="{{item.id}}">Buy
+                                                            </button>
+                            </form>
+                                {%else%}
+                                <a href="/register" class="btn btn-full">Sign Up now</a>
+                                {%endif%}
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                    <!-- <div class="col span-1-of-3 js--wp-5">
+                        <div class="plan-box">
+                            <div>
+                                <h3>JEE Bootcamp</h3>
+                                <p class="plan-price">Rs 599</p>
+                                <p class="plan-price-meal">30 days course with 65+ Hours Teaching</p>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <ion-icon name="checkmark-done" class="ion-icon"></ion-icon>2 hours class
+                                    </li>
+                                    <li>
+                                        <ion-icon name="checkmark-done"></ion-icon>Mon to friday
+                                    </li>
+                                    <li>
+                                        <ion-icon name="checkmark-done"></ion-icon>Life long access
+                                    </li>
+                                    <li>
+                                        <ion-icon name="checkmark-done"></ion-icon>live classes
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="/register" class="btn btn-full">Sign Up now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-3 js--wp-2">
+                        <div class="plan-box">
+                            <div>
+                                <h3>Coding Bootcamp</h3>
+                                <p class="plan-price">Rs 599</p>
+                                <p class="plan-price-meal">30 days course with 65+ Hours Teaching</p>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <ion-icon name="checkmark-done"></ion-icon>2 hours class
+                                    </li>
+                                    <li>
+                                        <ion-icon name="checkmark-done"></ion-icon>Mon to friday
+                                    </li>
+                                    <li>
+                                        <ion-icon name="checkmark-done"></ion-icon>Life long access
+                                    </li>
+                                    <li>
+                                        <ion-icon name="checkmark-done"></ion-icon>live classes
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="/register" class="btn btn-full">Sign Up now</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+    </section>
+
+    <section class="section-form js--wp-1">
+        <div class="row">
+            <h2>Contact us</h2>
+        </div>
+        <div class="row">
+            <form method="post" action="#" class="contact-form">
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="sname"> Name</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="name" id="sname" placeholder="enter your name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="email" name="email" id="email" placeholder="enter email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="mob1">Mobile Number</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="mobile" id="mob1" placeholder="enter Mobile Number" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label id="class">Category</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <select name="category" id="class">
+                            <option value="student" selected>student</option> 
+                            <option value="parent" >parent</option>
+                            <option value="teacher" >Teacher</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col span-1-of-3">
+                        <label for=""></label>
+                    </div> -->
+                    <div class="col span-2-of-3">
+                        <!-- <input type="submit" class="abc"name="submit" id="submit"  required> -->
+                        <button type="submit"class="abc" value="Contact">Contact Us</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">contact Us</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">call us +91-9501265123</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-links">
+                    <li><a href="https://wa.me/9501265123">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </a></li>
+                    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                            </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                @copyright kidoCBM.com all rights reserved
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- <script src="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"></script> -->
+    <script src="static/js/jquery.waypoints.min.js"></script>
+    <script src="static/js/script.js"></script>
+</body>
+</html>

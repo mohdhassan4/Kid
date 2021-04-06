@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/grid.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/ionicons.min.css">
+    <link rel="stylesheet" href="/static/css/queries.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    
+    <title>Sign In</title>
+
+
+    <!-- fav icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/favicon_package_v0.16/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon_package_v0.16/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon_package_v0.16/favicon-16x16.png">
+<link rel="manifest" href="favicons/favicon_package_v0.16/site.webmanifest">
+<link rel="mask-icon" href="favicons/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicons/favicon_package_v0.16/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicons/favicon_package_v0.16/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- <script src="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"></script> -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    {% for messages in messages%}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong id='done'>{{messages}}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>            
+      {%endfor%}
+        <nav> 
+            <div class="row">
+              <a href="/">  <img src="image/kidocbmlogo.png"  alt="kidocbm logo" class="logo"> </a>
+                <ul class="main-nav js--main-nav">
+                    <li><a href="#aceivements" style="color:black">aceivements</a></li>
+                    <li><a href="#Courses">Courses</a></li>
+                    <li><a href="#OurTeam">Our Team</a></li>
+                    <li><a href="/register" style="color:black">Sign Up</a></li>
+                    <li><a href="/login" style="color:black">Login</a></li>
+                </ul>
+                <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round ion-close-round"></i></a>
+            </div>
+        </nav>
+   <section class="section-form" style="margin-top: -70px;">
+        <div class="row">
+          <h2>Register Account</h2>
+        </div>
+        <div class="row">                
+            <form action="/register" method="POST" class="contact-form">
+                {%csrf_token%}
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="fname">Student Name</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" id="fname" name="username" placeholder="Your name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="lname">Parent Name</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                         <input type="text" id="lname" name="parentname" placeholder="Your Father's or Mother's name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="email" id="email" name="email" placeholder="Your email name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="mobile">Mobile Number</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="mobile" id="mobile" placeholder="enter Mobile Number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="watsapp_mobile">Watsapp Number</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="watsapp_mobile" id="watsapp_mobile" placeholder="enter Watsapp Number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="password" name="password" id="password" placeholder="enter your password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="confirmpassword">Confirm Password</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm your password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label id="class">Class</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <select name="childclass" id="childclass">
+                            <option value="6class" selected>6th Class</option> 
+                            <option value="7class" >7th Class</option>
+                            <option value="8class" >8th Class</option>
+                            <option value="9class">9th Class</option>
+                            <option value="10class">10th Class</option>
+                            <option value="11class">Inter 1st yr</option>
+                            <option value="12class">Inter 2st yr</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col span-1-of-3">
+                        <label for=""></label>
+                    </div> -->
+                    <div class="col span-2-of-3">
+                        <button type="submit"class="abc" value="Register">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+    
+
+
+</body>
+</html>
