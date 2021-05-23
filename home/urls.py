@@ -8,6 +8,9 @@ urlpatterns = [
     path('logout', views.Logout_view, name="Logout_view"),
     path('Buy', views.Purchase_course, name="Purchase_course"),
     path('success', views.Success, name='success'),
+    path('enrolledcourse', views.Student_profile, name="student_profile"),
+    path('forgot_mobile', views.Forgot_mobile, name='forgot_mobile'),
+    path('forgot_password', views.Forgot_password, name='forgot_password'),
 
 
 ]

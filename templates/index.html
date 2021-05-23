@@ -5,12 +5,16 @@
     <meta name="description" content="KidoCBM is the best website for who aspiring to get good rank in NEET and JEE, Here NEET and JEE qualified tutors will teach a subject in easy methods with low cost of fees, we wanted to make a student crack an exam">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/stylel.css">
     <link rel="stylesheet" href="/static/css/grid.css">
     <link rel="stylesheet" href="/static/css/normalize.css">
     <link rel="stylesheet" href="/static/css/ionicons.min.css">
     <link rel="stylesheet" href="/static/css/queries.css">
     <link rel="stylesheet" href="/static/css/animate.css">
+    
     <title>KidoCBM</title>
+
+
     <!-- fav icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/favicon_package_v0.16/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon_package_v0.16/favicon-32x32.png">
@@ -22,42 +26,40 @@
 <meta name="msapplication-config" content="favicons/favicon_package_v0.16/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
- integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
- integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
- integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 </head>
 <body> 
-  
+    <!-- {% for messages in messages%} -->
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="..." class="rounded mr-2" alt="...">
+          <strong class="mr-auto">Kidocbm</strong>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="toast-body">
+            <!-- {{messages}} -->
+        </div>
+      </div>           
+  <!-- {%endfor%} -->
     <header >
-        {% for messages in messages%}
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong id='done'>{{messages}}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>            
-      {%endfor%}
+        
         <nav> 
             <div class="row">
                 <img src="/static/image/kidocbmlogo.png" alt="kidocbm logo" class="logo">
                 <ul class="main-nav js--main-nav">
+
                     <li><a href="#aceivements">aceivements</a></li>
                     <li><a href="#Courses">Courses</a></li>
                     <li><a href="#OurTeam">Our Team</a></li>
                     {%if user.is_authenticated %}
-                    <h6>{{user.username}}</h6>
+                     <li><a href="/enrolledcourse">My Courses</a></li>
                     <li><a href="/logout">Logout</a></li>
                     {%else%}
                     <li><a href="/register">Sign Up</a></li>
                     <li><a href="/login">Login</a></li>
                     {%endif%}
+                  
                 </ul>
                 <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round ion-close-round"></i></a>
             </div>
@@ -304,74 +306,17 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
                                 <!-- <a href="/Buy" name="courseid" class="btn btn-full" value="{{item.id}}">Enrol now</a> -->
                                 <button class="buycourse3 shadow-lg  rounded"
                                                                 name="courseid"
-                                                                style="text-decoration: none;background-color: {{course.color2}};"
-                                                                value="{{item.id}}">Buy
-                                                            </button>
+                                                                value="{{item.id}}" style="border-radius: 20px; color: white; background-color: crimson; padding: 10px; border: 1x solid white;">Enroll Now
+                                </button>
                             </form>
                                 {%else%}
-                                <a href="/register" class="btn btn-full">Sign Up now</a>
+                                <a href="/register" class="btn btn-full">SignUp now</a>
                                 {%endif%}
                             </div>
                         </div>
                     </div>
-                    {%endfor%}
-                    <!-- <div class="col span-1-of-3 js--wp-5">
-                        <div class="plan-box">
-                            <div>
-                                <h3>JEE Bootcamp</h3>
-                                <p class="plan-price">Rs 599</p>
-                                <p class="plan-price-meal">30 days course with 65+ Hours Teaching</p>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>
-                                        <ion-icon name="checkmark-done" class="ion-icon"></ion-icon>2 hours class
-                                    </li>
-                                    <li>
-                                        <ion-icon name="checkmark-done"></ion-icon>Mon to friday
-                                    </li>
-                                    <li>
-                                        <ion-icon name="checkmark-done"></ion-icon>Life long access
-                                    </li>
-                                    <li>
-                                        <ion-icon name="checkmark-done"></ion-icon>live classes
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <a href="/register" class="btn btn-full">Sign Up now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col span-1-of-3 js--wp-2">
-                        <div class="plan-box">
-                            <div>
-                                <h3>Coding Bootcamp</h3>
-                                <p class="plan-price">Rs 599</p>
-                                <p class="plan-price-meal">30 days course with 65+ Hours Teaching</p>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>
-                                        <ion-icon name="checkmark-done"></ion-icon>2 hours class
-                                    </li>
-                                    <li>
-                                        <ion-icon name="checkmark-done"></ion-icon>Mon to friday
-                                    </li>
-                                    <li>
-                                        <ion-icon name="checkmark-done"></ion-icon>Life long access
-                                    </li>
-                                    <li>
-                                        <ion-icon name="checkmark-done"></ion-icon>live classes
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <a href="/register" class="btn btn-full">Sign Up now</a>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
+                {%endfor%}
+            </div>            
     </section>
 
     <section class="section-form js--wp-1">
@@ -464,7 +409,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <!-- <script src="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"></script> -->
-    <script src="static/js/jquery.waypoints.min.js"></script>
-    <script src="static/js/script.js"></script>
+    <script src="/static/js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/script.js"></script>
 </body>
 </html>

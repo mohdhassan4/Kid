@@ -72,6 +72,7 @@ def Purchase_course(request):
         R = Course.objects.filter(id=courseid)
         userid = request.user.id
         if Purchase.objects.filter(coursesId=courseid, userid=userid, status=True).exists():
+            messages.info(request, 'You are already enrolled courses')
             return redirect('/')
         else:
             Purchase.objects.filter(
@@ -126,3 +127,53 @@ def Success(request):
         else:
             messages.info(request, 'Failed to buy')
             return redirect('/')
+
+
+def Student_profile(request):
+    userid = request.user.id
+    items =  Purchase.objects.filter(userid=userid)
+    courseList=[]
+    for item in items:
+        course = Course.objects.filter(id=item.coursesId.id)
+        courseList.append(course[0])
+    # for i in courseList:
+    #     print(i[0].courseName)
+    return render(request,'enroll.html', {
+        'course': courseList
+    })
+
+
+def Forgot_mobile(request):
+    if request.method == 'POST':
+        phone = request.POST['mobile_number']
+        print("mahi",phone)
+        if Account.objects.filter(phonenumber = phone).exists():
+            request.session['Phone_Forgot'] = phone
+            return redirect('/forgot_password')
+        else:
+            messages.info(request, 'Invalid Phone number')
+            return redirect('/forgot_mobile')
+    else:
+        return render(request,'forgot_mobile.html')
+
+
+
+def Forgot_password(request):
+    if request.method == 'POST':
+        password = request.POST['password']
+        Password1 = request.POST['password1']
+        if password == Password1:
+            p_number = request.session.get('Phone_Forgot')
+            if Account.objects.filter(phonenumber=p_number):
+                u = Account.objects.get(phonenumber=p_number)
+                u.set_password(password)
+                u.save()
+                return redirect('/login')
+        else:
+            messages.info(request, 'Password not matched')
+            return redirect('/forgot_password')
+
+    else:
+        return render(request,'forgot_password.html')
+
+

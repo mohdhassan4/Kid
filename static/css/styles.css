@@ -34,7 +34,7 @@ body {
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
-    url('/image/6.jpg');
+    url('/static/image/6.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -99,7 +99,26 @@ input[type="submit"]:active {
   border: 1px solid #eb8d8d;
   color: #f74e4e;
 }
+/* button1 .btn-full1:hover, button1 .btn-full1:active, 
+button1 .btn-full1:link,
+button1 .btn-full1:visited
+{
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.5s, border 0.5s, color 0.5s;
 
+  background-color: #dc143c;
+  border: 1px solid #eb8d8d;
+  color: #fff;
+} */
+
+.riyaz{
+  border-radius: 20px;
+}
 .btn-ghost:link,
 .btn-ghost:visited {
   border: 1px solid #dc143c;

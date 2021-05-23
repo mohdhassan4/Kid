@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/grid.css">
     <link rel="stylesheet" href="/static/css/normalize.css">
@@ -33,7 +33,7 @@
     <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <!-- <script src="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"></script> -->
-    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/jquery.waypoints.min.js"></script>
     <script src="/static/js/script.js"></script>
     <title>Log in</title>
         
@@ -49,7 +49,7 @@
       {%endfor%}
         <nav> 
             <div class="row">
-              <a href="/">  <img src="image/kidocbmlogo.png"  alt="kidocbm logo" class="logo"> </a>
+              <a href="/">  <img src="/static/image/kidocbmlogo.png"  alt="kidocbm logo" class="logo"> </a>
                 <ul class="main-nav js--main-nav">
                     <li><a href="/register" style="color:black">Sign Up</a></li>
                     <li><a href="/login" style="color:black">Login</a></li>
@@ -63,10 +63,10 @@
           {%csrf_token%}
           <div class="row">
             <div class="col span-1-of-3">
-              <label for="email">Email</label>
+              <label for="email">Mobile Number</label>
             </div>
             <div class="col span-2-of-3">
-              <input type="txet" id="email" name="Phone" placeholder="Your email name..">
+              <input type="text" id="email" name="Phone" placeholder="Your your Mobile number..">
             </div>
           </div>
           <div class="row">
@@ -84,6 +84,7 @@
           </div>
         </form>
         <p style="text-align: center; margin-top:20px; margin-bottom: 80px">don't have an account then <a href="/register" style="color: crimson;">Register</a>, </p>
+        <p style="text-align: center; margin-top:20px; margin-bottom: 80px">don't have an account then <a href="/forgot_mobile" style="color: crimson;">Forgot Password</a>, </p>
       </div>
 
 </body>

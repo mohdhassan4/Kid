@@ -75,6 +75,8 @@ class Course(models.Model):
     courseName = models.CharField(max_length=100)
     price = models.IntegerField()
     tag = models.CharField(max_length=120)
+    date_enrolled = models.DateField(default = timezone.now)
+    zoom_link = models.TextField()
 
 
 class Purchase(models.Model):
