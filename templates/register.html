@@ -62,21 +62,21 @@
         </div>
         <div class="row">                
             <form action="/register" method="POST" class="contact-form">
-                {%csrf_token%}
+                {% csrf_token %}
                 <div class="row">
                     <div class="col span-1-of-3">
-                        <label for="fname">Student Name</label>
+                        <label for="username">Student Name</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="text" id="fname" name="username" placeholder="Your name..">
+                        <input type="text" id="username" name="username" placeholder="Your name..">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col span-1-of-3">
-                        <label for="lname">Parent Name</label>
+                        <label for="parentname">Parent Name</label>
                     </div>
                     <div class="col span-2-of-3">
-                         <input type="text" id="lname" name="parentname" placeholder="Your Father's or Mother's name..">
+                         <input type="text" id="parentname" name="parentname" placeholder="Your Father's or Mother's name..">
                     </div>
                 </div>
                 <div class="row">
